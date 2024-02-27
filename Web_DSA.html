@@ -49,18 +49,17 @@
 
         let tablaHTML = '<div class="jumbotron"><h1>Repositories</h1></div>';
         tablaHTML += '<table class="table">';
-        tablaHTML += '<thead><tr><th>Name</th><th>Likes</th></tr></thead>';
+        tablaHTML += '<thead><tr><th>Name</th><th>description</th>><th>Likes</th></tr></thead>';
         tablaHTML += '<tbody>';
 
 
         for (let i = 0; i < repositorios.length; i++) {
             
-            tablaHTML += `<tr><td>${repositorios[i].name}</td><td>${repositorios[i].stargazers_count}</td></tr>`;
+            tablaHTML += `<tr><td>${repositorios[i].name}</td><td>${repositorios[i].descripcion}</td><td>${repositorios[i].stargazers_count}</td></tr>`;
         }
 
         tablaHTML += '</tbody></table>';
 
-        //Esta parte la he buscado en ChatGPT para que me ayudara a abrir una ventana nueva
 
         var blob = new Blob([`
                 <!DOCTYPE html>
